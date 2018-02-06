@@ -1,0 +1,282 @@
+
+@import "https://fonts.googleapis.com/css?family=PT+Mono";
+.btn {
+  position: relative;
+
+  display: block;
+  margin: 30px auto;
+  padding: 0;
+
+  overflow: hidden;
+font-weight:600;
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+  
+  background-color: #70ff70;
+  color: #ecf0f1;
+  
+  transition: background-color .3s;
+}
+
+.btn:hover, .btn:focus {
+  background-color: #27ae60;
+}
+
+.btn > * {
+  position: relative;
+}
+
+.btn span {
+  display: block;
+  padding: 12px 24px;
+  font-size:2em;
+}
+
+.btn:before {
+  content: "";
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  
+  display: block;
+  width: 0;
+  padding-top: 0;
+    
+  border-radius: 100%;
+  
+  background-color: rgba(236, 240, 241, .3);
+  
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.btn:active:before {
+  width: 120%;
+  padding-top: 120%;
+  
+  transition: width .2s ease-out, padding-top .2s ease-out;
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: "PT Mono", sans-serif;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#263248+0,7e8aa2+100 */
+ /* background: #263248;
+  /* Old browsers */
+/*  background: -moz-linear-gradient(45deg, #263248 0%, #7e8aa2 100%);
+ 
+  background: -webkit-linear-gradient(45deg, #263248 0%, #7e8aa2 100%);
+
+  background: linear-gradient(45deg, #263248 0%, #7e8aa2 100%);*/
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#263248', endColorstr='#7e8aa2', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+}
+.card-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.card-wrapper .card {
+  -webkit-transform: translate3d(0, 0, 0);
+  will-change: transform;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+  opacity: 0;
+  -moz-transform: translateY(50px);
+  -webkit-transform: translateY(50px);
+  -o-transform: translateY(50px);
+  -ms-transform: translateY(50px);
+  transform: translateY(50px);
+  width: 250px;
+  height: 340px;
+  position: relative;
+  overflow: hidden;
+  transition-property: background-color, color;
+  transition-duration: 3s;
+  transition-delay: 0s, 1s;
+  transition-timing-function: cubic-bezier(0.1, 0.8, 0.5, 2), linear;      
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff9800+50,ffb14c+100 */
+  background: linear-gradient(to right, #61cf55, #0bd826e1);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff9800', endColorstr='#ffb14c', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+  border-radius: 8px;
+  -webkit-box-shadow: -5px 10px 25px 0 #263248;
+  box-shadow: -5px 10px 25px 0 #263248;
+}
+.card-wrapper .card .material-icons {
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+  opacity: 0;
+  will-change: transform;
+  -moz-transform: translateY(20px);
+  -webkit-transform: translateY(20px);
+  -o-transform: translateY(20px);
+  -ms-transform: translateY(20px);
+  transform: translateY(20px);
+  -webkit-transition-delay: 400ms;
+  transition-delay: 400ms;
+}
+.card-wrapper .card.show {
+  opacity: 1;
+  -moz-transform: translateY(0px);
+  -webkit-transform: translateY(0px);
+  -o-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
+}
+.card-wrapper .card.show .material-icons {
+  opacity: 1;
+  -moz-transform: translateY(0px);
+  -webkit-transform: translateY(0px);
+  -o-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
+}
+.card-wrapper .card.show .card-content {
+  opacity: 1;
+  -moz-transform: translateY(0px);
+  -webkit-transform: translateY(0px);
+  -o-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
+}
+.card-wrapper .card .card-top {
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  left: 33%;
+  top: 50px;
+}
+.card-wrapper .card .card-top i {
+  font-size: 90px;
+  color: #fff;
+}
+.card-wrapper .card .card-middle {
+  position: absolute;
+  bottom: 130px;
+  height: 30px;
+  left: 0px;
+  width: 100%;
+}
+.card-wrapper .card .card-content {
+  opacity: 0;
+  will-change: transform;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+  -moz-transform: translateY(50px);
+  -webkit-transform: translateY(50px);
+  -o-transform: translateY(50px);
+  -ms-transform: translateY(50px);
+  transform: translateY(50px);
+  -webkit-transition-delay: 200ms;
+  transition-delay: 200ms;
+  height: 340px;
+}
+.card-wrapper .card .card-bottom {
+  background: #fff;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  padding: 0px 10px;
+  font-size: 12px;
+  width: 230px;
+  height: 130px;
+  color: #20da27;
+}
+.card-wrapper .card .card-bottom h1 {
+  padding: 0px;
+  margin: 0px;
+  position: relative;
+  top: -15px;
+  color: #20da27;
+  -webkit-font-smoothing: antialiased;
+}
+.card-wrapper .card .card-bottom p {
+  -webkit-font-smoothing: antialiased;
+  margin: 0px;
+}
+
+
+.card-wrapper .card {
+
+  animation: background 3s infinite ;
+
+  /*transition: background 300ms ease-in 200ms;*/
+
+  /*transition-timing-function: ease-in-out;*/
+
+  /*transition-duration: 1s;*/
+
+}
+
+@keyframes bg-img-slider {
+
+  0%, 100% {
+
+    background: linear-gradient(to right, #3db72f, #3cbd4d);
+
+  }
+
+  20% {
+
+    background: linear-gradient(to right, #1aff00d5, #24fe41);
+
+  }
+
+  40% {
+
+    background: linear-gradient(to right, #3db72fa9, #24fe41d3);
+
+  }
+
+  60% {
+
+    background:linear-gradient(to right, #3db72f73, #24fe41f3);
+
+  }
+
+  80% {
+
+    background:linear-gradient(to right, #3db72f, #24fe4166);
+
+  }
+
+  90% {
+
+    background:linear-gradient(to right, #3db72f, #24fe4166);
+
+  }
+
+}
+
+
+@keyframes background {
+90% {
+    background:  linear-gradient(to right, #41af35b4, #24b9389a);
+   /* box-shadow: 0 -200px 100px -100px rgb(130, 255, 81) inset;
+  */}
+}
